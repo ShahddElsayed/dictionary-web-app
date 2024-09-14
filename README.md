@@ -20,7 +20,8 @@ Users should be able to:
 
 ### Screenshot
 
-![](./screenshot.jpg)
+![](./LightMode.jpeg)
+![](./DarkMode.jpeg)
 
 ### Links
 
