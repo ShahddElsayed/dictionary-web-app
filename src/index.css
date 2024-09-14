@@ -1,0 +1,361 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Lora:wght@400;700&family=Inconsolata:wght@400;700&display=swap");
+body {
+  font-family: "Sans Serif", sans-serif;
+  background-color: white;
+  color: black;
+  padding: 0;
+  margin: 0;
+}
+
+body.dark {
+  background-color: #121212;
+  color: white;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-right: 29rem;
+  padding-left: 29.5rem;
+  padding-top: 3rem;
+  background-color: transparent;
+}
+
+.app-logo {
+  width: 30px;
+  height: 30px;
+}
+
+.user-settings {
+  display: flex;
+  align-items: center;
+}
+
+.font-selector {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  position: relative;
+  color: inherit;
+}
+
+.font-selector p {
+  margin-right: 0.5rem;
+}
+
+.arrow-icon {
+  width: 16px;
+  height: 16px;
+}
+
+.dropdown {
+  display: block;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  z-index: 10;
+  width: 100px;
+}
+
+.dropdown-option {
+  padding: 0.2rem;
+  padding-left: 1rem;
+  cursor: pointer;
+}
+
+.dropdown-option:hover {
+  color: #9c58d0;
+}
+
+.separator-line {
+  width: 1px;
+  height: 20px;
+  background-color: #ccc;
+  margin: 0 2rem;
+}
+
+.theme-switcher {
+  display: flex;
+  align-items: center;
+}
+
+.theme-switcher input {
+  display: none;
+}
+
+.switch-label {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  margin-right: 0.5rem;
+}
+
+.switch-slider {
+  width: 34px;
+  height: 20px;
+  background-color: #938e8e;
+  border-radius: 20px;
+  position: relative;
+  transition: background-color 0.3s;
+}
+
+.switch-slider::before {
+  content: "";
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background-color: white;
+  position: absolute;
+  top: 3px;
+  left: 3px;
+  transition: transform 0.3s;
+}
+
+input:checked + .switch-label .switch-slider {
+  background-color: #8040b1;
+}
+
+input:checked + .switch-label .switch-slider::before {
+  transform: translateX(14px);
+}
+
+.theme-icon {
+  width: 24px;
+  height: 24px;
+  margin-left: 10px;
+}
+
+.search-bar {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 2rem 0;
+}
+
+.search-input-container {
+  display: flex;
+  align-items: center;
+  position: relative;
+  width: 100%;
+  max-width: 600px;
+}
+
+.search-input {
+  font-size: 1.1rem;
+  padding: 1rem;
+  padding-right: 3rem;
+  border: none;
+  border-radius: 20px;
+  background-color: #e6e6e7;
+  color: rgb(0, 0, 0);
+  width: 100%;
+}
+
+.search-input:focus {
+  outline: 2px solid #a445ed;
+}
+
+.search-input::placeholder {
+  font-weight: bold;
+  color: rgba(0, 0, 0, 0.485);
+}
+.app.dark .search-input {
+  background-color: #333333;
+  color: #ffffff;
+}
+
+.app.dark .search-input::placeholder {
+  color: rgba(255, 255, 255, 0.777);
+}
+
+.search-button {
+  position: absolute;
+  right: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+}
+
+.search-icon {
+  width: 20px;
+  height: 20px;
+  fill: #a445ed;
+}
+
+.error {
+  color: rgb(135, 48, 166);
+  font-size: 0.875rem;
+  margin-top: 0.5rem;
+  text-align: center;
+}
+
+.word-details-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+  flex-direction: column;
+  padding-left: 15rem;
+}
+.word-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 1rem;
+}
+
+.phonetics-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.word {
+  font-size: 3.8rem;
+  margin: 0;
+}
+
+.word-details {
+  max-width: 600px;
+  width: 100%;
+  padding: 1rem;
+  border-radius: 8px;
+  background-color: #ffffff;
+  color: #1f1f1f;
+  margin: 0 auto;
+}
+
+.app.dark .word-details {
+  background-color: #000000;
+  color: #ffffff;
+}
+
+.phonetics {
+  font-size: 1.4rem;
+  margin: 0.5rem 0;
+  color: #9c58d0;
+}
+
+.play-button {
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: inherit;
+}
+
+.app.dark .play-button {
+  color: #ffffff;
+}
+
+.app.dark .play-button path {
+  fill: #000000;
+}
+.play-icon {
+  color: #9c58d0;
+}
+
+.meanings {
+  margin-top: 1rem;
+}
+
+.meaning-section {
+  margin-bottom: 1rem;
+}
+
+.synonyms,
+.source {
+  margin-top: 1rem;
+}
+
+.meaning-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 0.5rem;
+}
+
+.part-of-speech {
+  margin-right: 0.5rem;
+}
+
+.separator-line {
+  flex: 1;
+  height: 0.5px;
+  background-color: #cccccc;
+}
+
+.meaning-label {
+  font-weight: 300;
+  color: #666;
+  margin-bottom: 0.9rem;
+  font-size: 1.1rem;
+}
+
+.meaning-list {
+  list-style-type: disc;
+  padding-left: 2.5rem;
+  margin: 0;
+  line-height: 1.6;
+}
+
+.meaning-list li {
+  margin-bottom: 0.5rem;
+}
+
+.example-sentence {
+  color: #666;
+  margin-top: 0.5rem;
+}
+
+.synonyms {
+  margin-top: 3rem;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 5px;
+  max-width: 100%;
+}
+
+.synonyms-label {
+  font-weight: 300;
+  color: #666;
+  margin-right: 20px;
+}
+
+.synonym {
+  color: #9c58d0;
+  margin-right: 0.5rem;
+  font-weight: 900;
+}
+
+.separator-bottom {
+  margin: 1rem 0;
+  height: 1px;
+  background-color: #ccc;
+  margin-top: 2.5rem;
+}
+
+.source {
+  margin-top: 1rem;
+  font-size: 0.9rem;
+}
+.source strong {
+  color: #938e8e;
+  margin-right: 15px;
+}
+.source a {
+  color: #5f5f5f;
+}
